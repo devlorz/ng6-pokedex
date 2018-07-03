@@ -1,3 +1,4 @@
+import { PokemonCardComponent } from './../app/pokemon-card/pokemon-card.component';
 import { storiesOf } from '@storybook/angular';
 import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
@@ -7,23 +8,23 @@ import { Welcome, Button } from '@storybook/angular/demo';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,
-  props: {},
+  props: {}
 }));
 
 storiesOf('Button', module)
   .add('with text', () => ({
     component: Button,
     props: {
-      text: 'Hello Button',
-    },
+      text: 'Hello Button'
+    }
   }))
   .add(
     'with some emoji',
     withNotes({ text: 'My notes on a button with emojis' })(() => ({
       component: Button,
       props: {
-        text: '😀 😎 👍 💯',
-      },
+        text: '😀 😎 👍 💯'
+      }
     }))
   )
   .add(
@@ -32,15 +33,27 @@ storiesOf('Button', module)
       component: Button,
       props: {
         text: '😀 😎 👍 💯',
-        onClick: action('This was clicked OMG'),
-      },
+        onClick: action('This was clicked OMG')
+      }
     }))
   );
 
-storiesOf('Another Button', module).add('button with link to another story', () => ({
-  component: Button,
+storiesOf('Another Button', module).add(
+  'button with link to another story',
+  () => ({
+    component: Button,
+    props: {
+      text: 'Go to Welcome Story',
+      onClick: linkTo('Welcome')
+    }
+  })
+);
+
+storiesOf('Pokemon Card', module).add('empty', () => ({
+  component: PokemonCardComponent,
   props: {
-    text: 'Go to Welcome Story',
-    onClick: linkTo('Welcome'),
-  },
+    pokemonName: 'Pokemon Name',
+    pokemonImageURL:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+  }
 }));
