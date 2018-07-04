@@ -5,6 +5,13 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Welcome, Button } from '@storybook/angular/demo';
+import { SearchBarComponent } from '../app/search-bar/search-bar.component';
+import {
+  MatButton,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule
+} from '@angular/material';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,
@@ -49,8 +56,19 @@ storiesOf('Another Button', module).add(
   })
 );
 
-storiesOf('Pokemon Card', module).add('empty', () => ({
+storiesOf('Search Bar', module).add('initial', () => ({
+  component: SearchBarComponent,
+  moduleMetadata: {
+    imports: [MatFormFieldModule]
+  },
+  props: {}
+}));
+
+storiesOf('Pokemon Card', module).add('initial', () => ({
   component: PokemonCardComponent,
+  moduleMetadata: {
+    imports: [MatCardModule, MatButtonModule]
+  },
   props: {
     pokemonName: 'Pokemon Name',
     pokemonImageURL:

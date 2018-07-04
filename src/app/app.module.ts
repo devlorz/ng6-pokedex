@@ -8,9 +8,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
-  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe],
+  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe, SearchBarComponent],
   imports: [
     AppMaterialModule,
     BrowserModule,
