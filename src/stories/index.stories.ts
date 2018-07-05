@@ -1,3 +1,5 @@
+import { ToolbarComponent } from './../app/toolbar/toolbar.component';
+import { SidenavComponent } from './../app/sidenav/sidenav.component';
 import { PokemonCardComponent } from './../app/pokemon-card/pokemon-card.component';
 import { storiesOf } from '@storybook/angular';
 import { withNotes } from '@storybook/addon-notes';
@@ -10,7 +12,10 @@ import {
   MatButton,
   MatButtonModule,
   MatCardModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatListModule,
+  MatDividerModule,
+  MatToolbarModule
 } from '@angular/material';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
@@ -60,6 +65,22 @@ storiesOf('Search Bar', module).add('initial', () => ({
   component: SearchBarComponent,
   moduleMetadata: {
     imports: [MatFormFieldModule]
+  },
+  props: {}
+}));
+
+storiesOf('Side Nav', module).add('initial', () => ({
+  component: SidenavComponent,
+  moduleMetadata: {
+    imports: [MatListModule, MatButtonModule, MatDividerModule]
+  },
+  props: {}
+}));
+
+storiesOf('Toolbar', module).add('initial', () => ({
+  component: ToolbarComponent,
+  moduleMetadata: {
+    imports: [MatButtonModule, MatToolbarModule]
   },
   props: {}
 }));

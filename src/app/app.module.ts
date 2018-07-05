@@ -9,9 +9,11 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
-  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe, SearchBarComponent],
+  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe, SearchBarComponent, SidenavComponent, ToolbarComponent],
   imports: [
     AppMaterialModule,
     BrowserModule,

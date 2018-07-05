@@ -1,0 +1,16 @@
+mat-toolbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+.home-button {
+  min-width: 30px;
+  margin-right: 15px;
+  width: 30px;
+  padding: 0;
+}
+
+.menu-img {
+  width: 30px;
+}
