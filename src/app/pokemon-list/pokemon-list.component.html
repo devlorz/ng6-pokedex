@@ -1,0 +1,6 @@
+<div class="container">
+  <app-pokemon-card class="wrapper"
+                    *ngFor="let pokemon of pokemonList"
+                    [pokemonName]="pokemon.name"
+                    [pokemonImageURL]="pokemon.sprite"></app-pokemon-card>
+</div>

@@ -11,9 +11,10 @@ import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
-  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe, SearchBarComponent, SidenavComponent, ToolbarComponent],
+  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe, SearchBarComponent, SidenavComponent, ToolbarComponent, PokemonListComponent],
   imports: [
     AppMaterialModule,
     BrowserModule,

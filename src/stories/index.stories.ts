@@ -17,6 +17,7 @@ import {
   MatDividerModule,
   MatToolbarModule
 } from '@angular/material';
+import { PokemonListComponent } from '../app/pokemon-list/pokemon-list.component';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,
@@ -94,5 +95,32 @@ storiesOf('Pokemon Card', module).add('initial', () => ({
     pokemonName: 'Pokemon Name',
     pokemonImageURL:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+  }
+}));
+
+storiesOf('Pokemon List', module).add('initial', () => ({
+  component: PokemonListComponent,
+  moduleMetadata: {
+    declarations: [PokemonCardComponent],
+    imports: [MatCardModule, MatButtonModule]
+  },
+  props: {
+    pokemonList: [
+      {
+        name: 'Pokemon Name',
+        sprite:
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+      },
+      {
+        name: 'Pokemon Name',
+        sprite:
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+      },
+      {
+        name: 'Pokemon Name',
+        sprite:
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
+      }
+    ]
   }
 }));
