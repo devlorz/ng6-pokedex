@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokemonListComponent } from './pokemon-list.component';
+import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
+import { MatCardModule, MatButtonModule } from '@angular/material';
 
 describe('PokemonListComponent', () => {
   let component: PokemonListComponent;
@@ -8,9 +10,9 @@ describe('PokemonListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PokemonListComponent ]
-    })
-    .compileComponents();
+      declarations: [PokemonListComponent, PokemonCardComponent],
+      imports: [MatCardModule, MatButtonModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -14,7 +14,15 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @NgModule({
-  declarations: [AppComponent, PokemonCardComponent, CapitalizePipe, SearchBarComponent, SidenavComponent, ToolbarComponent, PokemonListComponent],
+  declarations: [
+    AppComponent,
+    PokemonCardComponent,
+    CapitalizePipe,
+    SearchBarComponent,
+    SidenavComponent,
+    ToolbarComponent,
+    PokemonListComponent
+  ],
   imports: [
     AppMaterialModule,
     BrowserModule,
