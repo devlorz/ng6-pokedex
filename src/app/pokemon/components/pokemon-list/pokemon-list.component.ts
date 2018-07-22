@@ -1,5 +1,5 @@
-import { PokemonDetail } from './../models/pokemon-detail.model';
 import { Component, OnInit, Input } from '@angular/core';
+import { PokemonDetail } from '../../models/pokemon-detail.model';
 
 @Component({
   selector: 'app-pokemon-list',

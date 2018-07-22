@@ -1,13 +1,9 @@
-import { ToolbarComponent } from './../app/toolbar/toolbar.component';
-import { SidenavComponent } from './../app/sidenav/sidenav.component';
-import { PokemonCardComponent } from './../app/pokemon-card/pokemon-card.component';
 import { storiesOf } from '@storybook/angular';
 import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Welcome, Button } from '@storybook/angular/demo';
-import { SearchBarComponent } from '../app/search-bar/search-bar.component';
 import {
   MatButton,
   MatButtonModule,
@@ -17,7 +13,11 @@ import {
   MatDividerModule,
   MatToolbarModule
 } from '@angular/material';
-import { PokemonListComponent } from '../app/pokemon-list/pokemon-list.component';
+import { SearchBarComponent } from '../app/pokemon/components/search-bar/search-bar.component';
+import { PokemonCardComponent } from '../app/pokemon/components/pokemon-card/pokemon-card.component';
+import { PokemonListComponent } from '../app/pokemon/components/pokemon-list/pokemon-list.component';
+import { SidenavComponent } from '../app/core/components/sidenav/sidenav.component';
+import { ToolbarComponent } from '../app/core/components/toolbar/toolbar.component';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,

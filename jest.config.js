@@ -1,5 +1,4 @@
 module.exports = {
-  mapCoverage: true,
   globals: {
     __TS_CONFIG__: {
       target: 'es6',

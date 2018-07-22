@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\src\angular\ng6-pokedex\src\app\search-bar\search-bar.component.spec.ts">
-    <testCase name="SearchBarComponent should create" duration="216"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\core.module.spec.ts">
+    <testCase name="CoreModule should create an instance" duration="7"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\sidenav\sidenav.component.spec.ts">
-    <testCase name="SidenavComponent should create" duration="125"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-card\pokemon-card.component.spec.ts">
+    <testCase name="PokemonCardComponent should create" duration="224"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\toolbar\toolbar.component.spec.ts">
-    <testCase name="ToolbarComponent should create" duration="67"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\toolbar\toolbar.component.spec.ts">
+    <testCase name="ToolbarComponent should create" duration="239"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon-card\pokemon-card.component.spec.ts">
-    <testCase name="PokemonCardComponent should create" duration="80"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-list\pokemon-list.component.spec.ts">
+    <testCase name="PokemonListComponent should create" duration="242"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon-list\pokemon-list.component.spec.ts">
-    <testCase name="PokemonListComponent should create" duration="64"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\sidenav\sidenav.component.spec.ts">
+    <testCase name="SidenavComponent should create" duration="342"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="37"/>
-    <testCase name="AppComponent should have as title &apos;ng6-pokedex&apos;" duration="34"/>
-    <testCase name="AppComponent should render title in a h1 tag" duration="23"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\search-bar\search-bar.component.spec.ts">
+    <testCase name="SearchBarComponent should create" duration="313"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\shared\shared.module.spec.ts">
+    <testCase name="SharedModule should create an instance" duration="2"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\pokemon.module.spec.ts">
+    <testCase name="PokemonModule should create an instance" duration="2"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\home\home.component.spec.ts">
+    <testCase name="HomeComponent should create" duration="365"/>
   </file>
 </testExecutions>
