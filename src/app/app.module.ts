@@ -7,6 +7,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,6 @@ import { AppRoutingModule } from './app-routing.module';
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
-    BrowserAnimationsModule,
     CoreModule
   ],
   providers: [],

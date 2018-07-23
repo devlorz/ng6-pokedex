@@ -1,10 +1,11 @@
 <mat-toolbar color="accent"
              class="primary-toolbar">
   <button mat-button
-          class="home-button">
-    <!-- <mat-icon>menu</mat-icon> -->
-    <img class="menu-img"
-         src="../../assets/ic_menu_white_36.png" />
+          class="home-button"
+          (click)="onHomeBtnClick()">
+    <mat-icon>menu</mat-icon>
+    <!-- <img class="menu-img"
+         src="../../assets/ic_menu_white_36.png" /> -->
   </button>
   <span>NG6-POKEDEX</span>
 </mat-toolbar>
