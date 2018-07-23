@@ -9,7 +9,8 @@ import {
   MatDividerModule,
   MatListModule,
   MatButtonModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatIconModule
 } from '@angular/material';
 
 describe('HomeComponent', () => {
@@ -24,6 +25,7 @@ describe('HomeComponent', () => {
         MatButtonModule,
         MatDividerModule,
         MatToolbarModule,
+        MatIconModule,
         BrowserAnimationsModule
       ],
       declarations: [HomeComponent, SidenavComponent, ToolbarComponent]

@@ -11,7 +11,8 @@ import {
   MatFormFieldModule,
   MatListModule,
   MatDividerModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatIconModule
 } from '@angular/material';
 import { SearchBarComponent } from '../app/pokemon/components/search-bar/search-bar.component';
 import { PokemonCardComponent } from '../app/pokemon/components/pokemon-card/pokemon-card.component';
@@ -81,7 +82,7 @@ storiesOf('Side Nav', module).add('initial', () => ({
 storiesOf('Toolbar', module).add('initial', () => ({
   component: ToolbarComponent,
   moduleMetadata: {
-    imports: [MatButtonModule, MatToolbarModule]
+    imports: [MatButtonModule, MatToolbarModule, MatIconModule]
   },
   props: {}
 }));
