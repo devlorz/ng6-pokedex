@@ -1,7 +1,9 @@
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { HomeComponent } from './home.component';
 import {
@@ -26,7 +28,8 @@ describe('HomeComponent', () => {
         MatDividerModule,
         MatToolbarModule,
         MatIconModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RouterTestingModule
       ],
       declarations: [HomeComponent, SidenavComponent, ToolbarComponent]
     }).compileComponents();

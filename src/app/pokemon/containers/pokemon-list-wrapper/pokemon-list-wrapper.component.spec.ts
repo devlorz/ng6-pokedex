@@ -1,6 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokemonListWrapperComponent } from './pokemon-list-wrapper.component';
+import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
+import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
+import { MatCardModule } from '@angular/material';
+import { PokemonService } from '../../services/pokemon.service';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
@@ -8,9 +13,14 @@ describe('PokemonListWrapperComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PokemonListWrapperComponent ]
-    })
-    .compileComponents();
+      imports: [MatCardModule, HttpClientModule],
+      declarations: [
+        PokemonListWrapperComponent,
+        PokemonListComponent,
+        PokemonCardComponent
+      ],
+      providers: [PokemonService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
