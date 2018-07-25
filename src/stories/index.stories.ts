@@ -16,9 +16,9 @@ import {
 } from '@angular/material';
 import { SearchBarComponent } from '../app/pokemon/components/search-bar/search-bar.component';
 import { PokemonCardComponent } from '../app/pokemon/components/pokemon-card/pokemon-card.component';
-import { PokemonListComponent } from '../app/pokemon/components/pokemon-list/pokemon-list.component';
 import { SidenavComponent } from '../app/core/components/sidenav/sidenav.component';
 import { ToolbarComponent } from '../app/core/components/toolbar/toolbar.component';
+import { PokemonListComponent } from '../app/pokemon/components/pokemon-list/pokemon-list.component';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,

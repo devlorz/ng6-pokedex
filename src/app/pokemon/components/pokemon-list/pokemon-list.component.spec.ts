@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokemonListComponent } from './pokemon-list.component';
-import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
 import { MatCardModule, MatButtonModule } from '@angular/material';
+import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
 
 describe('PokemonListComponent', () => {
   let component: PokemonListComponent;
