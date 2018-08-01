@@ -2,5 +2,6 @@
   <app-pokemon-card class="wrapper"
                     *ngFor="let pokemon of pokemonList"
                     [pokemonName]="pokemon.name"
-                    [pokemonImageURL]="pokemon.sprite"></app-pokemon-card>
+                    [pokemonImageURL]="pokemon.sprite"
+                    [pokemonTypes]="pokemon.types"></app-pokemon-card>
 </div>

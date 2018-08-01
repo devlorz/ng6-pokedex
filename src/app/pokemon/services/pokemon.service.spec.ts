@@ -17,4 +17,12 @@ describe('PokemonService', () => {
       expect(service).toBeTruthy();
     }
   ));
+
+  it('should return colorCode', inject(
+    [PokemonService],
+    (service: PokemonService) => {
+      expect(service.getColorCode('water')).toBe('#6890F0');
+      expect(service.getColorCode('etc')).toBe('#fff');
+    }
+  ));
 });

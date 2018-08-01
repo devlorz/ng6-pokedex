@@ -1,5 +1,6 @@
 <button mat-button>
-  <mat-card class="pokemon-card">
+  <mat-card class="pokemon-card"
+            [ngStyle]="{'background': getBackground(), 'background-color': getColor()}">
 
     <img class="pokemon-img"
          src={{pokemonImageURL}}>
