@@ -6,10 +6,17 @@ import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list
 import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
 import { MatCardModule } from '@angular/material';
 import { PokemonService } from '../../services/pokemon.service';
+import { PokemonDetail } from '../../models/pokemon-detail.model';
+import { of } from 'rxjs';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
   let fixture: ComponentFixture<PokemonListWrapperComponent>;
+
+  const samplePokemonDetail: Array<PokemonDetail> = [];
+  const mockService = <PokemonService>{
+    getPokemon: () => of(samplePokemonDetail)
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -19,7 +26,7 @@ describe('PokemonListWrapperComponent', () => {
         PokemonListComponent,
         PokemonCardComponent
       ],
-      providers: [PokemonService]
+      providers: [{ provide: PokemonService, useValue: mockService }]
     }).compileComponents();
   }));
 
@@ -31,5 +38,9 @@ describe('PokemonListWrapperComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should return empty array when onInit', () => {
+    expect(component.pokemonList).toEqual([]);
   });
 });

@@ -18,7 +18,7 @@ module.exports = {
   },
   transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
   collectCoverageFrom: [
-    'src/app/module/**/*.{ts}',
+    'src/app/**/*.{ts}',
     '!src/app/*.{ts}',
     '!src/app/**/*.{js}',
     '!src/app/environment/*.{ts}',

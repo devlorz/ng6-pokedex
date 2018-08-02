@@ -44,4 +44,14 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return over when small screen', () => {
+    component.isSmallScreen = true;
+    expect(component.sideNavMode).toBe('over');
+  });
+
+  it('should return side when big screen', () => {
+    component.isSmallScreen = false;
+    expect(component.sideNavMode).toBe('side');
+  });
 });
