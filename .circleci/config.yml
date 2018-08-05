@@ -1,6 +1,7 @@
 version: 2
 jobs:
-  test-job:
+  build:
+    working_directory: ~/ng6-pokedex
     docker:
       - image: circleci/node:8-browsers
     steps:
