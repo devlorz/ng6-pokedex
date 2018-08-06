@@ -1,6 +1,7 @@
 import { PokemonService } from './../../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pokemon-list-wrapper',
@@ -9,17 +10,19 @@ import { PokemonDetail } from '../../models/pokemon-detail.model';
 })
 export class PokemonListWrapperComponent implements OnInit {
   public pokemonList: Array<PokemonDetail> = [];
+  public pokemonList$: Observable<Array<PokemonDetail>>;
 
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {
-    this.pokemonService.getPokemon().subscribe(
-      res => {
-        this.pokemonList = res;
-      },
-      error => {
-        this.pokemonList = [];
-      }
-    );
+    this.pokemonList$ = this.pokemonService.getPokemon();
+    // this.pokemonService.getPokemon().subscribe(
+    //   res => {
+    //     this.pokemonList = res;
+    //   },
+    //   error => {
+    //     this.pokemonList = [];
+    //   }
+    // );
   }
 }

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { PokemonDetail } from '../models/pokemon-detail.model';
-import { map } from 'rxjs/operators';
+import { map, catchError, tap } from 'rxjs/operators';
 import Pokemon from '../models/pokemon.model';
 
 @Injectable({
@@ -44,7 +44,8 @@ export class PokemonService {
           types: pokemon.types.sort(),
           description: pokemon.description
         }));
-      })
+      }),
+      catchError(() => of(<Array<PokemonDetail>>[]))
     );
   }
 
