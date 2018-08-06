@@ -16,13 +16,5 @@ export class PokemonListWrapperComponent implements OnInit {
 
   ngOnInit() {
     this.pokemonList$ = this.pokemonService.getPokemon();
-    // this.pokemonService.getPokemon().subscribe(
-    //   res => {
-    //     this.pokemonList = res;
-    //   },
-    //   error => {
-    //     this.pokemonList = [];
-    //   }
-    // );
   }
 }

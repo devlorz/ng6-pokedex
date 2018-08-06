@@ -4,10 +4,16 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PokemonListWrapperComponent } from './pokemon-list-wrapper.component';
 import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
 import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
-import { MatCardModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule
+} from '@angular/material';
 import { PokemonService } from '../../services/pokemon.service';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
 import { of } from 'rxjs';
+import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
@@ -20,11 +26,18 @@ describe('PokemonListWrapperComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [MatCardModule, HttpClientModule],
+      imports: [
+        MatCardModule,
+        MatFormFieldModule,
+        HttpClientModule,
+        MatInputModule,
+        BrowserAnimationsModule
+      ],
       declarations: [
         PokemonListWrapperComponent,
         PokemonListComponent,
-        PokemonCardComponent
+        PokemonCardComponent,
+        SearchBarComponent
       ],
       providers: [{ provide: PokemonService, useValue: mockService }]
     }).compileComponents();
