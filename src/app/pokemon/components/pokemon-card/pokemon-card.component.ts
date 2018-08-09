@@ -13,9 +13,12 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonCardComponent implements OnInit {
-  @Input('pokemonName') pokemonName: string;
-  @Input() pokemonImageURL: string;
-  @Input() pokemonTypes: Array<string>;
+  @Input('pokemonName')
+  pokemonName: string;
+  @Input()
+  pokemonImageURL: string;
+  @Input()
+  pokemonTypes: Array<string>;
 
   constructor(private pokemonService: PokemonService) {}
 
