@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { PokemonDetail } from '../models/pokemon-detail.model';
-import { map, catchError, tap } from 'rxjs/operators';
+import { map, catchError, tap, share, shareReplay } from 'rxjs/operators';
 import Pokemon from '../models/pokemon.model';
 
 @Injectable({
@@ -31,10 +31,11 @@ export class PokemonService {
     ['dragon', '#7038F8'],
     ['ghost', '#705898']
   ]);
+  private cachePokemonList$: Observable<Array<PokemonDetail>>;
 
   constructor(private http: HttpClient) {}
 
-  getPokemon(): Observable<Array<PokemonDetail>> {
+  requestPokemon(): Observable<Array<PokemonDetail>> {
     return this.http.get(`${this.baseUrl}`).pipe(
       map((pokemonList: Array<Pokemon>) => {
         return pokemonList.map((pokemon: Pokemon) => ({
@@ -47,6 +48,11 @@ export class PokemonService {
       }),
       catchError(() => of(<Array<PokemonDetail>>[]))
     );
+  }
+
+  getPokemonList(): Observable<Array<PokemonDetail>> {
+    this.cachePokemonList$ = this.requestPokemon().pipe(shareReplay(1));
+    return this.cachePokemonList$;
   }
 
   getColorCode(colorName: string): string {

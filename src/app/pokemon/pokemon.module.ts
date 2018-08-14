@@ -7,9 +7,10 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { PokemonListWrapperComponent } from './containers/pokemon-list-wrapper/pokemon-list-wrapper.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, PokemonRoutingModule, AppMaterialModule],
+  imports: [CommonModule, PokemonRoutingModule, AppMaterialModule, FormsModule],
   declarations: [
     PokemonCardComponent,
     SearchBarComponent,

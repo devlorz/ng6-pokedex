@@ -14,6 +14,7 @@ import { PokemonDetail } from '../../models/pokemon-detail.model';
 import { of } from 'rxjs';
 import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
@@ -31,7 +32,8 @@ describe('PokemonListWrapperComponent', () => {
         MatFormFieldModule,
         HttpClientModule,
         MatInputModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        FormsModule
       ],
       declarations: [
         PokemonListWrapperComponent,

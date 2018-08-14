@@ -3,5 +3,7 @@
                 color="accent">
   <input type="search"
          placeholder="Search pokemon"
+         [(ngModel)]="searchText"
+         (ngModelChange)="onSearch($event)"
          matInput>
 </mat-form-field>
