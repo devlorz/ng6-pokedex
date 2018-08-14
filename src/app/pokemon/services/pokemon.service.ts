@@ -2,7 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { PokemonDetail } from '../models/pokemon-detail.model';
-import { map, catchError, tap, share, shareReplay } from 'rxjs/operators';
+import {
+  map,
+  catchError,
+  tap,
+  share,
+  shareReplay,
+  publishReplay,
+  refCount
+} from 'rxjs/operators';
 import Pokemon from '../models/pokemon.model';
 
 @Injectable({
@@ -51,7 +59,9 @@ export class PokemonService {
   }
 
   getPokemonList(): Observable<Array<PokemonDetail>> {
-    this.cachePokemonList$ = this.requestPokemon().pipe(shareReplay(1));
+    if (!this.cachePokemonList$) {
+      this.cachePokemonList$ = this.requestPokemon().pipe(shareReplay(1));
+    }
     return this.cachePokemonList$;
   }
 

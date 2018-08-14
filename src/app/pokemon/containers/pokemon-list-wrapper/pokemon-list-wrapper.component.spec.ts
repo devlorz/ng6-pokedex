@@ -22,7 +22,7 @@ describe('PokemonListWrapperComponent', () => {
 
   const samplePokemonDetail: Array<PokemonDetail> = [];
   const mockService = <PokemonService>{
-    getPokemon: () => of(samplePokemonDetail)
+    getPokemonList: () => of(samplePokemonDetail)
   };
 
   beforeEach(async(() => {
