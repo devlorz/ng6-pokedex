@@ -8,6 +8,7 @@ import { PokemonListWrapperComponent } from './containers/pokemon-list-wrapper/p
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   imports: [CommonModule, PokemonRoutingModule, AppMaterialModule, FormsModule],
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     PokemonCardComponent,
     SearchBarComponent,
     PokemonListComponent,
-    PokemonListWrapperComponent
+    PokemonListWrapperComponent,
+    PokemonDetailComponent
   ]
 })
 export class PokemonModule {}
