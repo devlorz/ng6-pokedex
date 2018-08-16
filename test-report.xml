@@ -1,44 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-card\pokemon-card.component.spec.ts">
-    <testCase name="PokemonCardComponent should create" duration="223"/>
-    <testCase name="PokemonCardComponent should render pokemon name, image URL and one background color when 1 type" duration="70"/>
-    <testCase name="PokemonCardComponent should render pokemon name, image URL and two background colors when 2 types" duration="62"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\pokemon.module.spec.ts">
+    <testCase name="PokemonModule should create an instance" duration="7"/>
   </file>
   <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-list\pokemon-list.component.spec.ts">
-    <testCase name="PokemonListComponent should create" duration="201"/>
-    <testCase name="PokemonListComponent should not render pokemon component when no pokemon data" duration="64"/>
-    <testCase name="PokemonListComponent should render pokemon component when there is pokemon data" duration="100"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\search-bar\search-bar.component.spec.ts">
-    <testCase name="SearchBarComponent should create" duration="234"/>
+    <testCase name="PokemonListComponent should create" duration="228"/>
+    <testCase name="PokemonListComponent should not render pokemon component when no pokemon data" duration="96"/>
+    <testCase name="PokemonListComponent should render pokemon component when there is pokemon data" duration="97"/>
   </file>
   <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\containers\pokemon-list-wrapper\pokemon-list-wrapper.component.spec.ts">
-    <testCase name="PokemonListWrapperComponent should create" duration="292"/>
-    <testCase name="PokemonListWrapperComponent should return empty array when onInit" duration="176"/>
+    <testCase name="PokemonListWrapperComponent should create" duration="395"/>
+    <testCase name="PokemonListWrapperComponent should return empty array when onInit" duration="161"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\pokemon.module.spec.ts">
-    <testCase name="PokemonModule should create an instance" duration="2"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\toolbar\toolbar.component.spec.ts">
-    <testCase name="ToolbarComponent should create" duration="178"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\sidenav\sidenav.component.spec.ts">
-    <testCase name="SidenavComponent should create" duration="261"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\services\pokemon.service.spec.ts">
-    <testCase name="PokemonService should be created" duration="21"/>
-    <testCase name="PokemonService should return colorCode" duration="23"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\shared\shared.module.spec.ts">
-    <testCase name="SharedModule should create an instance" duration="2"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\core.module.spec.ts">
-    <testCase name="CoreModule should create an instance" duration="2"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\home\home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="367"/>
-    <testCase name="HomeComponent should return over when small screen" duration="189"/>
-    <testCase name="HomeComponent should return side when big screen" duration="145"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-card\pokemon-card.component.spec.ts">
+    <testCase name="PokemonCardComponent should create" duration="159"/>
+    <testCase name="PokemonCardComponent should render pokemon name, image URL and one background color when 1 type" duration="63"/>
+    <testCase name="PokemonCardComponent should render pokemon name, image URL and two background colors when 2 types" duration="47"/>
   </file>
 </testExecutions>

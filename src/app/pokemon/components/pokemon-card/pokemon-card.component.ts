@@ -24,19 +24,12 @@ export class PokemonCardComponent implements OnInit {
 
   ngOnInit() {}
 
-  public getColor() {
-    if (!this.pokemonTypes || this.pokemonTypes.length > 1) {
-      return '';
-    } else {
-      const type = this.pokemonTypes[0];
-      return this.pokemonService.getColorCode(type);
-    }
-  }
-
   public getBackground() {
-    if (!this.pokemonTypes || this.pokemonTypes.length < 2) {
-      return '';
-    } else {
+    if (this.pokemonTypes && this.pokemonTypes.length === 1) {
+      const type = this.pokemonTypes[0];
+      const color = this.pokemonService.getColorCode(type);
+      return { 'background-color': color };
+    } else if (this.pokemonTypes && this.pokemonTypes.length === 2) {
       const codeList = this.pokemonTypes.map((colorName: string) =>
         this.pokemonService.getColorCode(colorName)
       );
@@ -44,7 +37,7 @@ export class PokemonCardComponent implements OnInit {
         return `${acc}, ${cur} 50%`;
       }, '');
       const linearGradient = `linear-gradient(90deg${gradient})`;
-      return linearGradient;
+      return { background: linearGradient };
     }
   }
 }

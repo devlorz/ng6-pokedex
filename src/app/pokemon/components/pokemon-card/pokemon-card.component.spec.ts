@@ -7,9 +7,9 @@ import { PokemonService } from '../../services/pokemon.service';
 import { createComponent, RenderResult } from 'ngx-testing-library';
 
 describe('PokemonCardComponent', () => {
-  let component: PokemonCardComponent;
-  let fixture: ComponentFixture<PokemonCardComponent>;
-  let wrapper: RenderResult;
+  // let component: PokemonCardComponent;
+  // let fixture: ComponentFixture<PokemonCardComponent>;
+  // let wrapper: RenderResult;
 
   // beforeEach(async(() => {
   //   TestBed.configureTestingModule({
@@ -59,6 +59,7 @@ describe('PokemonCardComponent', () => {
         }
       },
       {
+        detectChanges: true,
         imports: [MatCardModule, MatButtonModule, HttpClientModule],
         declarations: [PokemonCardComponent],
         providers: [PokemonService]
@@ -77,13 +78,18 @@ describe('PokemonCardComponent', () => {
     const pokemonName = 'pikachu';
     const pokemonImageURL = `localhost`;
     const pokemonTypes = ['fire', 'poison'];
-    const { getByText, getByAltText, container } = await createComponent(
+    const {
+      getByText,
+      getByAltText,
+      container,
+      fixture
+    } = await createComponent(
       {
         component: PokemonCardComponent,
         parameters: {
           pokemonName,
           pokemonImageURL,
-          pokemonTypes: ['fire', 'grass']
+          pokemonTypes: pokemonTypes
         }
       },
       {
@@ -97,7 +103,11 @@ describe('PokemonCardComponent', () => {
     expect(getByAltText('pokemon-img').getAttribute('src')).toContain(
       pokemonImageURL
     );
-    // expect(container.querySelector('mat-card')).toBeFalsy();
+    expect(container.querySelector('mat-card')).toBeTruthy();
+    const component = fixture.componentInstance;
+    expect(component.getBackground()).toEqual({
+      background: 'linear-gradient(90deg, #F08030 50%, #A040A0 50%)'
+    });
   });
 
   // it('getColor() should return empty when types is more than 1', () => {
