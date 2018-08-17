@@ -5,9 +5,5 @@
     "module": "es2015",
     "types": []
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts",
-    "stories"
-  ]
+  "exclude": ["src/test.ts", "**/*.spec.ts", "**/*.stories.ts"]
 }
