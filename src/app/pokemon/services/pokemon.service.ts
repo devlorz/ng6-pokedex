@@ -12,6 +12,7 @@ import {
   refCount
 } from 'rxjs/operators';
 import Pokemon from '../models/pokemon.model';
+import { colorCode, titleColorCode } from './colorCode';
 
 @Injectable({
   providedIn: 'root'
@@ -20,25 +21,6 @@ export class PokemonService {
   private baseUrl = 'https://ng5-pwa-a853e.firebaseio.com/pokemon.json';
   private baseSpriteUrl =
     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
-  private colorCode = new Map([
-    ['grass', '#78C850'],
-    ['fire', '#F08030'],
-    ['water', '#6890F0'],
-    ['bug', '#A8B820'],
-    ['poison', '#A040A0'],
-    ['flying', '#A890F0'],
-    ['normal', '#A8A878'],
-    ['electric', '#F8D030'],
-    ['ground', '#E0C068'],
-    ['fairy', '#EE99AC'],
-    ['fighting', '#C03028'],
-    ['psychic', '#F85888'],
-    ['steel', '#B8B8D0'],
-    ['ice', '#98D8D8'],
-    ['rock', '#B8A038'],
-    ['dragon', '#7038F8'],
-    ['ghost', '#705898']
-  ]);
   private cachePokemonList$: Observable<Array<PokemonDetail>>;
 
   constructor(private http: HttpClient) {}
@@ -66,8 +48,15 @@ export class PokemonService {
   }
 
   getColorCode(colorName: string): string {
-    if (this.colorCode.has(colorName)) {
-      return this.colorCode.get(colorName);
+    if (colorCode.has(colorName)) {
+      return colorCode.get(colorName);
+    }
+    return '#fff';
+  }
+
+  getTitleColorCode(colorName: string): string {
+    if (titleColorCode.has(colorName)) {
+      return titleColorCode.get(colorName);
     }
     return '#fff';
   }

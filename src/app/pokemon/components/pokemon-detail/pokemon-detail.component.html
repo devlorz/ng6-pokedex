@@ -1,3 +1,39 @@
-<p>
-  pokemon-detail works!
-</p>
+<button class="background"
+        mat-dialog-close
+        [ngStyle]="{'background': getBackground(), 'background-color': getBackgroundColor()}">
+  <button mat-button
+          class="close-btn">
+    <!-- <mat-icon class="icon-back">arrow_back</mat-icon> -->
+    <img src="./assets/ic_arrow_back_36.png" />
+  </button>
+  <div class="container">
+
+    <h2 mat-dialog-title
+        [ngStyle]="{'background-color': getTitleColor()}">{{ pokemon.name | capitalize}}</h2>
+    <mat-dialog-content>
+      <div class="above-content clearfix">
+        <ul class="types-list">
+          <li *ngFor="let type of pokemon.types"
+              class="type-list"
+              [ngStyle]="{'background-color': getColor(type)}">
+            {{ type }}
+          </li>
+        </ul>
+        <span class="pokemon-id">#{{pokemon.id}}</span>
+      </div>
+      <div class="middle-content">
+        <div class="left-content">
+          <img class="pokemon-img"
+               src={{pokemon.sprite}}>
+        </div>
+        <div class="right-content clearfix">
+
+          <div class="description clearfix">
+            {{ pokemon.description }}
+          </div>
+        </div>
+      </div>
+
+    </mat-dialog-content>
+  </div>
+</button>

@@ -15,6 +15,7 @@ import { of } from 'rxjs';
 import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { CapitalizePipe } from '../../../shared/capitalize.pipe';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
@@ -39,7 +40,8 @@ describe('PokemonListWrapperComponent', () => {
         PokemonListWrapperComponent,
         PokemonListComponent,
         PokemonCardComponent,
-        SearchBarComponent
+        SearchBarComponent,
+        CapitalizePipe
       ],
       providers: [{ provide: PokemonService, useValue: mockService }]
     }).compileComponents();

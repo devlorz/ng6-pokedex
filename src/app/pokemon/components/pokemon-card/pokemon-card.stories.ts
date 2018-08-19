@@ -3,12 +3,14 @@ import { PokemonCardComponent } from './pokemon-card.component';
 import { MatCardModule, MatButtonModule } from '@angular/material';
 import { PokemonService } from '../../services/pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CapitalizePipe } from '../../../shared/capitalize.pipe';
 
 storiesOf('Pokemon Card', module).add('initial', () => ({
   component: PokemonCardComponent,
   moduleMetadata: {
     imports: [MatCardModule, MatButtonModule, HttpClientModule],
-    providers: [PokemonService]
+    providers: [PokemonService],
+    declarations: [CapitalizePipe]
   },
   props: {
     pokemonName: 'Pokemon Name',

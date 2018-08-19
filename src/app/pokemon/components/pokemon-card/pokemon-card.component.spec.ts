@@ -5,6 +5,7 @@ import { PokemonCardComponent } from './pokemon-card.component';
 import { MatButtonModule, MatCardModule } from '@angular/material';
 import { PokemonService } from '../../services/pokemon.service';
 import { createComponent, RenderResult } from 'ngx-testing-library';
+import { CapitalizePipe } from '../../../shared/capitalize.pipe';
 
 describe('PokemonCardComponent', () => {
   // let component: PokemonCardComponent;
@@ -38,7 +39,7 @@ describe('PokemonCardComponent', () => {
       `<app-pokemon-card></app-pokemon-card>`,
       {
         imports: [MatCardModule, MatButtonModule, HttpClientModule],
-        declarations: [PokemonCardComponent],
+        declarations: [PokemonCardComponent, CapitalizePipe],
         providers: [PokemonService]
       }
     );
@@ -61,11 +62,11 @@ describe('PokemonCardComponent', () => {
       {
         detectChanges: true,
         imports: [MatCardModule, MatButtonModule, HttpClientModule],
-        declarations: [PokemonCardComponent],
+        declarations: [PokemonCardComponent, CapitalizePipe],
         providers: [PokemonService]
       }
     );
-    expect(getByText(pokemonName)).toBeDefined();
+    expect(getByText('Pikachu')).toBeDefined();
     expect(getByAltText('pokemon-img').getAttribute('src')).toContain(
       pokemonImageURL
     );
@@ -94,12 +95,12 @@ describe('PokemonCardComponent', () => {
       },
       {
         imports: [MatCardModule, MatButtonModule, HttpClientModule],
-        declarations: [PokemonCardComponent],
+        declarations: [PokemonCardComponent, CapitalizePipe],
         providers: [PokemonService],
         detectChanges: true
       }
     );
-    expect(getByText(pokemonName)).toBeDefined();
+    expect(getByText('Pikachu')).toBeDefined();
     expect(getByAltText('pokemon-img').getAttribute('src')).toContain(
       pokemonImageURL
     );

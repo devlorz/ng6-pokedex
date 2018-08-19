@@ -1,3 +1,4 @@
+import { CapitalizePipe } from './../shared/capitalize.pipe';
 import { AppMaterialModule } from './../app-material.module';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { NgModule } from '@angular/core';
@@ -6,7 +7,6 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { PokemonListWrapperComponent } from './containers/pokemon-list-wrapper/pokemon-list-wrapper.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 
@@ -17,7 +17,8 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
     SearchBarComponent,
     PokemonListComponent,
     PokemonListWrapperComponent,
-    PokemonDetailComponent
+    PokemonDetailComponent,
+    CapitalizePipe
   ]
 })
 export class PokemonModule {}

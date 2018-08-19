@@ -1,11 +1,11 @@
 <button mat-button>
   <mat-card class="pokemon-card"
             [ngStyle]="getBackground()">
-            <!-- [ngStyle]="{'background': getBackground(), 'background-color': getColor()}"> -->
+    <!-- [ngStyle]="{'background': getBackground(), 'background-color': getColor()}"> -->
 
     <img class="pokemon-img"
          alt="pokemon-img"
          src={{pokemonImageURL}}>
-    <span class="pokemon-title">{{pokemonName}}</span>
+    <span class="pokemon-title">{{ pokemonName | capitalize }}</span>
   </mat-card>
 </button>

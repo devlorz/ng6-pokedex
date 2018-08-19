@@ -1,3 +1,4 @@
+import { CapitalizePipe } from './../../../shared/capitalize.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
@@ -19,7 +20,11 @@ describe('PokemonListComponent', () => {
       set: { changeDetection: ChangeDetectionStrategy.Default }
     })
       .configureTestingModule({
-        declarations: [PokemonListComponent, PokemonCardComponent],
+        declarations: [
+          PokemonListComponent,
+          PokemonCardComponent,
+          CapitalizePipe
+        ],
         imports: [MatCardModule, MatButtonModule, HttpClientModule]
       })
       .compileComponents();
