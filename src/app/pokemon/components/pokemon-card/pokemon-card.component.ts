@@ -3,7 +3,9 @@ import {
   Component,
   OnInit,
   Input,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  Output,
+  EventEmitter
 } from '@angular/core';
 
 @Component({
@@ -19,10 +21,18 @@ export class PokemonCardComponent implements OnInit {
   pokemonImageURL: string;
   @Input()
   pokemonTypes: Array<string>;
+  @Input()
+  pokemonId: number;
+  @Output()
+  openDialog = new EventEmitter<number>();
 
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {}
+
+  public onOpenDialog() {
+    this.openDialog.next(this.pokemonId);
+  }
 
   public getBackground() {
     if (this.pokemonTypes && this.pokemonTypes.length === 1) {

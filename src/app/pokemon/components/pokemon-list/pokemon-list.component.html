@@ -3,5 +3,7 @@
                     *ngFor="let pokemon of pokemonList"
                     [pokemonName]="pokemon.name"
                     [pokemonImageURL]="pokemon.sprite"
-                    [pokemonTypes]="pokemon.types"></app-pokemon-card>
+                    [pokemonTypes]="pokemon.types"
+                    [pokemonId]="pokemon.id"
+                    (openDialog)="onOpenDialog($event)"></app-pokemon-card>
 </div>

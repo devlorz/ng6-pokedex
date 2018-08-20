@@ -12,6 +12,7 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
+  entryComponents: [PokemonDetailComponent],
   imports: [
     CommonModule,
     PokemonRoutingModule,

@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
 
 const pokemonDetail: PokemonDetail = {
-  name: 'name',
-  sprite: 'image',
-  types: [],
-  id: 0,
-  description: 'desc'
+  name: 'pikachu',
+  sprite:
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png',
+  types: ['electric'],
+  id: 25,
+  description:
+    ' It occasionally uses an electric shock to recharge a fellow Pikachu that is in a weakened state. '
 };
 
 storiesOf('Pokemon Detail', module).add('initial', () => ({
@@ -18,7 +20,12 @@ storiesOf('Pokemon Detail', module).add('initial', () => ({
   moduleMetadata: {
     declarations: [CapitalizePipe],
     imports: [MatDialogModule, HttpClientModule],
-    providers: [{ provide: MAT_DIALOG_DATA, useValue: pokemonDetail }]
+    providers: [
+      {
+        provide: MAT_DIALOG_DATA,
+        useValue: pokemonDetail
+      }
+    ]
   },
   props: {}
 }));

@@ -1,5 +1,5 @@
 <div class="wrapper">
   <app-search-bar class="search-bar"
                   (search)="onSearch($event)"></app-search-bar>
-  <app-pokemon-list [pokemonList]="pokemonList$ | async"></app-pokemon-list>
+  <app-pokemon-list [pokemonList]="pokemonList$ | async" (openDialog)="onOpenDialog($event)"></app-pokemon-list>
 </div>

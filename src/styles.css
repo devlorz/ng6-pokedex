@@ -3,3 +3,12 @@
 body {
   margin: 0;
 }
+
+.mat-dialog-container {
+  padding: 0 !important;
+  transition: none !important;
+}
+
+.cdk-overlay-pane {
+  max-width: 100% !important;
+}

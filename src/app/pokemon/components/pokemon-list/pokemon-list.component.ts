@@ -2,7 +2,9 @@ import {
   Component,
   OnInit,
   Input,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  Output,
+  EventEmitter
 } from '@angular/core';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
 
@@ -13,9 +15,17 @@ import { PokemonDetail } from '../../models/pokemon-detail.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonListComponent implements OnInit {
-  @Input() pokemonList: Array<PokemonDetail>;
+  @Input()
+  pokemonList: Array<PokemonDetail>;
+  @Output()
+  openDialog = new EventEmitter<number>();
 
   constructor() {}
 
   ngOnInit() {}
+
+  public onOpenDialog(id: number) {
+    console.log('​PokemonListComponent -> publiconOpenDialog -> id', id);
+    this.openDialog.emit(id);
+  }
 }

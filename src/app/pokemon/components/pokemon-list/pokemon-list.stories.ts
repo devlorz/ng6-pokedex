@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { HttpClientModule } from '@angular/common/http';
 import { storiesOf } from '@storybook/angular';
 import { PokemonListComponent } from './pokemon-list.component';
@@ -17,20 +18,24 @@ storiesOf('Pokemon List', module).add('initial', () => ({
         name: 'Bulbasur 1',
         sprite:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-        types: ['grass']
+        types: ['grass'],
+        id: 1
       },
       {
         name: 'Bulbasur 2',
         sprite:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-        types: ['fire']
+        types: ['fire'],
+        id: 2
       },
       {
         name: 'Bulbasur 3',
         sprite:
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-        types: ['water']
+        types: ['water'],
+        id: 3
       }
     ]
-  }
+  },
+  openDialog: action('openDialog')
 }));

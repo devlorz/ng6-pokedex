@@ -7,7 +7,9 @@ import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card
 import {
   MatCardModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatDialog,
+  MatDialogModule
 } from '@angular/material';
 import { PokemonService } from '../../services/pokemon.service';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
@@ -16,6 +18,7 @@ import { SearchBarComponent } from '../../components/search-bar/search-bar.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
+import { Overlay } from '@angular/cdk/overlay';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
@@ -34,7 +37,8 @@ describe('PokemonListWrapperComponent', () => {
         HttpClientModule,
         MatInputModule,
         BrowserAnimationsModule,
-        FormsModule
+        FormsModule,
+        MatDialogModule
       ],
       declarations: [
         PokemonListWrapperComponent,

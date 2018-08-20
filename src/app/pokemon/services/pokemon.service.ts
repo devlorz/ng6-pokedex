@@ -9,7 +9,8 @@ import {
   share,
   shareReplay,
   publishReplay,
-  refCount
+  refCount,
+  filter
 } from 'rxjs/operators';
 import Pokemon from '../models/pokemon.model';
 import { colorCode, titleColorCode } from './colorCode';
@@ -24,6 +25,14 @@ export class PokemonService {
   private cachePokemonList$: Observable<Array<PokemonDetail>>;
 
   constructor(private http: HttpClient) {}
+
+  getPokemonById(id: number): Observable<PokemonDetail> {
+    return this.cachePokemonList$.pipe(
+      map(pokemonList =>
+        pokemonList.filter(pokemon => pokemon.id === id).reduce((_, cur) => cur)
+      )
+    );
+  }
 
   requestPokemon(): Observable<Array<PokemonDetail>> {
     return this.http.get(`${this.baseUrl}`).pipe(

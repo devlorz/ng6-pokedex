@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/angular';
 import { PokemonCardComponent } from './pokemon-card.component';
 import { MatCardModule, MatButtonModule } from '@angular/material';
@@ -16,6 +17,8 @@ storiesOf('Pokemon Card', module).add('initial', () => ({
     pokemonName: 'Pokemon Name',
     pokemonImageURL:
       'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
-    pokemonTypes: ['fire', 'grass']
+    pokemonTypes: ['fire', 'grass'],
+    pokemonId: 1,
+    openDialog: action('openDialog')
   }
 }));
