@@ -4,7 +4,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PokemonDetailComponent } from './pokemon-detail.component';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
-import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material';
+import {
+  MatDialogModule,
+  MAT_DIALOG_DATA,
+  MatIconModule
+} from '@angular/material';
 import { InjectionToken } from '@angular/core';
 
 describe('PokemonDetailComponent', () => {
@@ -21,7 +25,7 @@ describe('PokemonDetailComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PokemonDetailComponent, CapitalizePipe],
-      imports: [MatDialogModule, HttpClientModule],
+      imports: [MatDialogModule, HttpClientModule, MatIconModule],
       providers: [{ provide: MAT_DIALOG_DATA, useValue: pokemonDetail }]
     }).compileComponents();
   }));
