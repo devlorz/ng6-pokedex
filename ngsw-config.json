@@ -18,7 +18,22 @@
     "resources": {
       "files": [
         "/assets/**"
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/**",
+        "https://fonts.googleapis.com/icon?family=Material+Icons"
       ]
+    }
+  }],
+  "dataGroups": [{
+    "name": "api-performance",
+    "urls": [
+      "https://ng5-pwa-a853e.firebaseio.com/pokemon.json"
+    ],
+    "cacheConfig": {
+      "maxSize": 200,
+      "maxAge": "3d",
+      "strategy": "performance"
     }
   }]
 }
