@@ -1,7 +1,11 @@
 import { PokemonDetailComponent } from './pokemon-detail.component';
 import { storiesOf } from '@storybook/angular';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
-import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material';
+import {
+  MatDialogModule,
+  MAT_DIALOG_DATA,
+  MatIconModule
+} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
 
@@ -19,7 +23,7 @@ storiesOf('Pokemon Detail', module).add('initial', () => ({
   component: PokemonDetailComponent,
   moduleMetadata: {
     declarations: [CapitalizePipe],
-    imports: [MatDialogModule, HttpClientModule],
+    imports: [MatDialogModule, HttpClientModule, MatIconModule],
     providers: [
       {
         provide: MAT_DIALOG_DATA,
