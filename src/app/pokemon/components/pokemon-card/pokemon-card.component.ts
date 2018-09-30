@@ -38,7 +38,7 @@ export class PokemonCardComponent implements OnInit {
     if (this.pokemonTypes && this.pokemonTypes.length === 1) {
       const type = this.pokemonTypes[0];
       const color = this.pokemonService.getColorCode(type);
-      return { 'background-color': color };
+      return { backgroundColor: color };
     } else if (this.pokemonTypes && this.pokemonTypes.length === 2) {
       const codeList = this.pokemonTypes.map((colorName: string) =>
         this.pokemonService.getColorCode(colorName)

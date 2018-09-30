@@ -1,4 +1,5 @@
-import { PokemonService } from './../../services/pokemon.service';
+import { PokemonDetailWrapperComponent } from './../pokemon-detail-wrapper/pokemon-detail-wrapper.component';
+import { PokemonDataService } from './../../services/pokemon-data.service';
 import { Component, OnInit } from '@angular/core';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
 import { Observable } from 'rxjs';
@@ -16,7 +17,7 @@ export class PokemonListWrapperComponent implements OnInit {
   public pokemonList$: Observable<Array<PokemonDetail>>;
 
   constructor(
-    private pokemonService: PokemonService,
+    private pokemonService: PokemonDataService,
     public dialog: MatDialog
   ) {}
 
@@ -29,7 +30,7 @@ export class PokemonListWrapperComponent implements OnInit {
       .getPokemonById(id)
       .pipe(take(1))
       .subscribe(res =>
-        this.dialog.open(PokemonDetailComponent, {
+        this.dialog.open(PokemonDetailWrapperComponent, {
           width: '100%',
           height: '100%',
           hasBackdrop: true,

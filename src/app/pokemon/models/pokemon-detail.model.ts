@@ -4,4 +4,7 @@ export interface PokemonDetail {
   id: number;
   types: Array<string>;
   description: string;
+  backgroundColor?: any;
+  titleColor?: string;
+  typesColor?: {[key: string]: string};
 }

@@ -1,15 +1,9 @@
-import { HttpClientModule } from '@angular/common/http';
-import { PokemonDetail } from './../../models/pokemon-detail.model';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { PokemonDetail } from './../../models/pokemon-detail.model';
+import { AppMaterialModule } from './../../../app-material.module';
 import { PokemonDetailComponent } from './pokemon-detail.component';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
-import {
-  MatDialogModule,
-  MAT_DIALOG_DATA,
-  MatIconModule
-} from '@angular/material';
-import { InjectionToken } from '@angular/core';
 
 describe('PokemonDetailComponent', () => {
   let component: PokemonDetailComponent;
@@ -19,20 +13,23 @@ describe('PokemonDetailComponent', () => {
     sprite: 'image',
     types: [],
     id: 0,
-    description: 'desc'
+    description: 'desc',
+    backgroundColor: { backgroundColor: '#F08030' },
+    titleColor: 'rgb(171, 79, 13)',
+    typesColor: { fire: '#F08030' }
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [PokemonDetailComponent, CapitalizePipe],
-      imports: [MatDialogModule, HttpClientModule, MatIconModule],
-      providers: [{ provide: MAT_DIALOG_DATA, useValue: pokemonDetail }]
+      imports: [AppMaterialModule]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PokemonDetailComponent);
     component = fixture.componentInstance;
+    component.pokemon = pokemonDetail;
     fixture.detectChanges();
   });
 

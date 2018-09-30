@@ -1,3 +1,4 @@
+import { PokemonDataService } from './services/pokemon-data.service';
 import { CommonModule } from '@angular/common';
 import { CapitalizePipe } from './../shared/capitalize.pipe';
 import { AppMaterialModule } from './../app-material.module';
@@ -10,9 +11,10 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { FormsModule } from '@angular/forms';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { SharedModule } from '../shared/shared.module';
+import { PokemonDetailWrapperComponent } from './containers/pokemon-detail-wrapper/pokemon-detail-wrapper.component';
 
 @NgModule({
-  entryComponents: [PokemonDetailComponent],
+  entryComponents: [PokemonDetailWrapperComponent],
   imports: [
     CommonModule,
     PokemonRoutingModule,
@@ -25,7 +27,8 @@ import { SharedModule } from '../shared/shared.module';
     SearchBarComponent,
     PokemonListComponent,
     PokemonListWrapperComponent,
-    PokemonDetailComponent
+    PokemonDetailComponent,
+    PokemonDetailWrapperComponent
   ]
 })
 export class PokemonModule {}

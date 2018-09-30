@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\sidenav\sidenav.component.spec.ts">
-    <testCase name="SidenavComponent should create" duration="352"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\search-bar\search-bar.component.spec.ts">
-    <testCase name="SearchBarComponent should create" duration="358"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-list\pokemon-list.component.spec.ts">
-    <testCase name="PokemonListComponent should create" duration="253"/>
-    <testCase name="PokemonListComponent should not render pokemon component when no pokemon data" duration="109"/>
-    <testCase name="PokemonListComponent should render pokemon component when there is pokemon data" duration="177"/>
-  </file>
   <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-detail\pokemon-detail.component.spec.ts">
-    <testCase name="PokemonDetailComponent should create" duration="344"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-card\pokemon-card.component.spec.ts">
-    <testCase name="PokemonCardComponent should create" duration="272"/>
-    <testCase name="PokemonCardComponent should render pokemon name, image URL and one background color when 1 type" duration="167"/>
-    <testCase name="PokemonCardComponent should render pokemon name, image URL and two background colors when 2 types" duration="126"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\containers\pokemon-list-wrapper\pokemon-list-wrapper.component.spec.ts">
-    <testCase name="PokemonListWrapperComponent should create" duration="523"/>
-    <testCase name="PokemonListWrapperComponent should return empty array when onInit" duration="312"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\shared\shared.module.spec.ts">
-    <testCase name="SharedModule should create an instance" duration="2"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\core.module.spec.ts">
-    <testCase name="CoreModule should create an instance" duration="2"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\pokemon.module.spec.ts">
-    <testCase name="PokemonModule should create an instance" duration="1"/>
-  </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\services\pokemon.service.spec.ts">
-    <testCase name="PokemonService should be created" duration="35"/>
-    <testCase name="PokemonService should return colorCode" duration="33"/>
+    <testCase name="PokemonDetailComponent should create" duration="499"/>
   </file>
   <file path="C:\src\angular\ng6-pokedex\src\app\core\components\toolbar\toolbar.component.spec.ts">
-    <testCase name="ToolbarComponent should create" duration="155"/>
+    <testCase name="ToolbarComponent should create" duration="500"/>
   </file>
-  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\home\home.component.spec.ts">
-    <testCase name="HomeComponent should create" duration="586"/>
-    <testCase name="HomeComponent should return over when small screen" duration="420"/>
-    <testCase name="HomeComponent should return side when big screen" duration="317"/>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-list\pokemon-list.component.spec.ts">
+    <testCase name="PokemonListComponent should create" duration="241"/>
+    <testCase name="PokemonListComponent should not render pokemon component when no pokemon data" duration="114"/>
+    <testCase name="PokemonListComponent should render pokemon component when there is pokemon data" duration="135"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\containers\pokemon-list-wrapper\pokemon-list-wrapper.component.spec.ts">
+    <testCase name="PokemonListWrapperComponent should create" duration="486"/>
+    <testCase name="PokemonListWrapperComponent should return empty array when onInit" duration="262"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\containers\pokemon-detail-wrapper\pokemon-detail-wrapper.component.spec.ts">
+    <testCase name="PokemonDetailWrapperComponent should create" duration="810"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\components\sidenav\sidenav.component.spec.ts">
+    <testCase name="SidenavComponent should create" duration="279"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\search-bar\search-bar.component.spec.ts">
+    <testCase name="SearchBarComponent should create" duration="339"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\pokemon.module.spec.ts">
+    <testCase name="PokemonModule should create an instance" duration="2"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\components\pokemon-card\pokemon-card.component.spec.ts">
+    <testCase name="PokemonCardComponent should create" duration="498"/>
+    <testCase name="PokemonCardComponent should render pokemon name, image URL and one background color when 1 type" duration="338"/>
+    <testCase name="PokemonCardComponent should render pokemon name, image URL and two background colors when 2 types" duration="412"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\shared\shared.module.spec.ts">
+    <testCase name="SharedModule should create an instance" duration="1"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\core.module.spec.ts">
+    <testCase name="CoreModule should create an instance" duration="4"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\services\pokemon.service.spec.ts">
+    <testCase name="PokemonService should be created" duration="27"/>
+    <testCase name="PokemonService should return colorCode" duration="19"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\pokemon\services\pokemon-data.service.spec.ts">
+    <testCase name="PokemonDataService should be created" duration="27"/>
+  </file>
+  <file path="C:\src\angular\ng6-pokedex\src\app\core\containers\home\home.component.spec.ts">
+    <testCase name="HomeComponent should create" duration="701"/>
+    <testCase name="HomeComponent should return over when small screen" duration="574"/>
+    <testCase name="HomeComponent should return side when big screen" duration="371"/>
   </file>
 </testExecutions>

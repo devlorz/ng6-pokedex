@@ -1,6 +1,6 @@
 <button class="background"
         mat-dialog-close
-        [ngStyle]="{'background': getBackground(), 'background-color': getBackgroundColor()}">
+        [ngStyle]="pokemon.backgroundColor">
   <button mat-button
           class="close-btn">
     <mat-icon class="icon-back">arrow_back</mat-icon>
@@ -9,13 +9,13 @@
   <div class="container">
 
     <h2 mat-dialog-title
-        [ngStyle]="{'background-color': getTitleColor()}">{{ pokemon.name | capitalize}}</h2>
+        [ngStyle]="getTitleColor()">{{ pokemon.name | capitalize}}</h2>
     <mat-dialog-content>
       <div class="above-content clearfix">
         <ul class="types-list">
           <li *ngFor="let type of pokemon.types"
               class="type-list"
-              [ngStyle]="{'background-color': getColor(type)}">
+              [ngStyle]="getColor(type)">
             {{ type }}
           </li>
         </ul>

@@ -1,11 +1,11 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { createComponent, RenderResult } from 'ngx-testing-library';
 
 import { PokemonCardComponent } from './pokemon-card.component';
-import { MatButtonModule, MatCardModule } from '@angular/material';
 import { PokemonService } from '../../services/pokemon.service';
-import { createComponent, RenderResult } from 'ngx-testing-library';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
+import { AppMaterialModule } from '../../../app-material.module';
 
 describe('PokemonCardComponent', () => {
   // let component: PokemonCardComponent;
@@ -38,7 +38,7 @@ describe('PokemonCardComponent', () => {
     const { container } = await createComponent(
       `<app-pokemon-card></app-pokemon-card>`,
       {
-        imports: [MatCardModule, MatButtonModule, HttpClientModule],
+        imports: [AppMaterialModule, HttpClientModule],
         declarations: [PokemonCardComponent, CapitalizePipe],
         providers: [PokemonService]
       }
@@ -61,7 +61,7 @@ describe('PokemonCardComponent', () => {
       },
       {
         detectChanges: true,
-        imports: [MatCardModule, MatButtonModule, HttpClientModule],
+        imports: [AppMaterialModule, HttpClientModule],
         declarations: [PokemonCardComponent, CapitalizePipe],
         providers: [PokemonService]
       }
@@ -94,7 +94,7 @@ describe('PokemonCardComponent', () => {
         }
       },
       {
-        imports: [MatCardModule, MatButtonModule, HttpClientModule],
+        imports: [AppMaterialModule, HttpClientModule],
         declarations: [PokemonCardComponent, CapitalizePipe],
         providers: [PokemonService],
         detectChanges: true

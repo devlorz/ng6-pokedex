@@ -19,13 +19,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
 import { Overlay } from '@angular/cdk/overlay';
+import { PokemonDataService } from '../../services/pokemon-data.service';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
   let fixture: ComponentFixture<PokemonListWrapperComponent>;
 
   const samplePokemonDetail: Array<PokemonDetail> = [];
-  const mockService = <PokemonService>{
+  const mockService = <PokemonDataService>{
     getPokemonList: () => of(samplePokemonDetail)
   };
 
@@ -47,7 +48,7 @@ describe('PokemonListWrapperComponent', () => {
         SearchBarComponent,
         CapitalizePipe
       ],
-      providers: [{ provide: PokemonService, useValue: mockService }]
+      providers: [{ provide: PokemonDataService, useValue: mockService }]
     }).compileComponents();
   }));
 
