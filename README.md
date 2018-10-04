@@ -1,4 +1,6 @@
-# Ng6Pokedex
+# NG-POKEDEX
+
+![alt text](https://github.com/devlorz/ng6-pokedex/blob/master/src/assets/icons/icon-256.png "NG-POKEDEX")
 
 [![CircleCI](https://circleci.com/gh/devlorz/ng6-pokedex.svg?style=svg)](https://circleci.com/gh/devlorz/ng6-pokedex)
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&category=PWA)](https://github.com/ebidel/lighthouse-badge)
