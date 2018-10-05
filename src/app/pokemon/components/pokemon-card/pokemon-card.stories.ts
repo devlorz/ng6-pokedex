@@ -1,15 +1,15 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/angular';
-import { PokemonCardComponent } from './pokemon-card.component';
-import { MatCardModule, MatButtonModule } from '@angular/material';
-import { PokemonService } from '../../services/pokemon.service';
-import { HttpClientModule } from '@angular/common/http';
+
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
+import { PokemonService } from '../../services/pokemon.service';
+import { AppMaterialModule } from './../../../app-material.module';
+import { PokemonCardComponent } from './pokemon-card.component';
 
 storiesOf('Pokemon Card', module).add('initial', () => ({
   component: PokemonCardComponent,
   moduleMetadata: {
-    imports: [MatCardModule, MatButtonModule, HttpClientModule],
+    imports: [AppMaterialModule],
     providers: [PokemonService],
     declarations: [CapitalizePipe]
   },

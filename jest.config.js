@@ -26,7 +26,8 @@ module.exports = {
     '!src/app/**/*.module.{ts}',
     '!src/app/**/*.interface.{ts}',
     '!src/app/**/*.state.{ts}',
-    '!src/app/**/*.entity.{ts}'
+    '!src/app/**/*.entity.{ts}',
+    '!src/app/**/*.stories.{ts}'
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
   testPathIgnorePatterns: ['/node_modules/', '/dist/', 'src/app/*.{js}'],

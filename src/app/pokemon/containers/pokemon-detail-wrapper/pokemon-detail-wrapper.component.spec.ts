@@ -1,11 +1,11 @@
-import { AppMaterialModule } from './../../../app-material.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material';
 
-import { PokemonDetailWrapperComponent } from './pokemon-detail-wrapper.component';
-import { PokemonDetail } from '../../models/pokemon-detail.model';
-import { PokemonDetailComponent } from '../../components/pokemon-detail/pokemon-detail.component';
 import { SharedModule } from '../../../shared/shared.module';
+import { PokemonDetailComponent } from '../../components/pokemon-detail/pokemon-detail.component';
+import { PokemonDetail } from '../../models/pokemon-detail.model';
+import { AppMaterialModule } from './../../../app-material.module';
+import { PokemonDetailWrapperComponent } from './pokemon-detail-wrapper.component';
 
 describe('PokemonDetailWrapperComponent', () => {
   let component: PokemonDetailWrapperComponent;
@@ -15,7 +15,10 @@ describe('PokemonDetailWrapperComponent', () => {
     sprite: 'image',
     types: [],
     id: 0,
-    description: 'desc'
+    description: 'desc',
+    backgroundColor: { backgroundColor: '#F08030' },
+    titleColor: 'rgb(171, 79, 13)',
+    typesColor: { fire: '#F08030' }
   };
 
   beforeEach(async(() => {

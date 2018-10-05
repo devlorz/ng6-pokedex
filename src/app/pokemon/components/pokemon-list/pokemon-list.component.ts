@@ -1,11 +1,12 @@
 import {
-  Component,
-  OnInit,
-  Input,
   ChangeDetectionStrategy,
-  Output,
-  EventEmitter
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output
 } from '@angular/core';
+
 import { PokemonDetail } from '../../models/pokemon-detail.model';
 
 @Component({
@@ -25,7 +26,6 @@ export class PokemonListComponent implements OnInit {
   ngOnInit() {}
 
   public onOpenDialog(id: number) {
-    console.log('​PokemonListComponent -> publiconOpenDialog -> id', id);
     this.openDialog.emit(id);
   }
 }

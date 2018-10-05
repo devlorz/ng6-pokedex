@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokemonDetail } from './../../models/pokemon-detail.model';
-import { AppMaterialModule } from './../../../app-material.module';
-import { PokemonDetailComponent } from './pokemon-detail.component';
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
+import { AppMaterialModule } from './../../../app-material.module';
+import { PokemonDetail } from './../../models/pokemon-detail.model';
+import { PokemonDetailComponent } from './pokemon-detail.component';
 
 describe('PokemonDetailComponent', () => {
   let component: PokemonDetailComponent;

@@ -1,4 +1,4 @@
-interface Pokemon {
+export interface Pokemon {
   id: number;
   name: string;
   height: number;
@@ -6,5 +6,3 @@ interface Pokemon {
   types: Array<string>;
   description: string;
 }
-
-export default Pokemon;

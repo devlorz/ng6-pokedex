@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
-import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { AppMaterialModule } from '../app-material.module';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeComponent } from './containers/home/home.component';
 
 @NgModule({

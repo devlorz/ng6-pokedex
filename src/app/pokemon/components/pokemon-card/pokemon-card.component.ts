@@ -1,12 +1,13 @@
-import { PokemonService } from './../../services/pokemon.service';
 import {
-  Component,
-  OnInit,
-  Input,
   ChangeDetectionStrategy,
-  Output,
-  EventEmitter
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output
 } from '@angular/core';
+
+import { PokemonService } from './../../services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-card',

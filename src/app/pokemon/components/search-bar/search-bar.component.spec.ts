@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SearchBarComponent } from './search-bar.component';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppMaterialModule } from './../../../app-material.module';
+import { SearchBarComponent } from './search-bar.component';
 
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
@@ -11,12 +11,7 @@ describe('SearchBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MatFormFieldModule,
-        MatInputModule,
-        BrowserAnimationsModule,
-        FormsModule
-      ],
+      imports: [AppMaterialModule, BrowserAnimationsModule, FormsModule],
       declarations: [SearchBarComponent]
     }).compileComponents();
   }));

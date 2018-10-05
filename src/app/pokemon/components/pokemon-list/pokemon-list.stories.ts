@@ -1,16 +1,16 @@
 import { action } from '@storybook/addon-actions';
-import { HttpClientModule } from '@angular/common/http';
 import { storiesOf } from '@storybook/angular';
-import { PokemonListComponent } from './pokemon-list.component';
-import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
-import { MatCardModule, MatButtonModule } from '@angular/material';
+
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
+import { PokemonCardComponent } from '../pokemon-card/pokemon-card.component';
+import { AppMaterialModule } from './../../../app-material.module';
+import { PokemonListComponent } from './pokemon-list.component';
 
 storiesOf('Pokemon List', module).add('initial', () => ({
   component: PokemonListComponent,
   moduleMetadata: {
     declarations: [PokemonCardComponent, CapitalizePipe],
-    imports: [MatCardModule, MatButtonModule, HttpClientModule]
+    imports: [AppMaterialModule]
   },
   props: {
     pokemonList: [

@@ -1,11 +1,11 @@
-import { PokemonDetailWrapperComponent } from './../pokemon-detail-wrapper/pokemon-detail-wrapper.component';
-import { PokemonDataService } from './../../services/pokemon-data.service';
 import { Component, OnInit } from '@angular/core';
-import { PokemonDetail } from '../../models/pokemon-detail.model';
-import { Observable } from 'rxjs';
-import { filter, map, take } from 'rxjs/operators';
 import { MatDialog } from '@angular/material';
-import { PokemonDetailComponent } from '../../components/pokemon-detail/pokemon-detail.component';
+import { Observable } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+
+import { PokemonDetail } from '../../models/pokemon-detail.model';
+import { PokemonDataService } from './../../services/pokemon-data.service';
+import { PokemonDetailWrapperComponent } from './../pokemon-detail-wrapper/pokemon-detail-wrapper.component';
 
 @Component({
   selector: 'app-pokemon-list-wrapper',

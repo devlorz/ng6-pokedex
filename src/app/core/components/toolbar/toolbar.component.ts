@@ -1,9 +1,9 @@
 import {
+  ChangeDetectionStrategy,
   Component,
-  OnInit,
-  Output,
   EventEmitter,
-  ChangeDetectionStrategy
+  OnInit,
+  Output
 } from '@angular/core';
 
 @Component({
@@ -13,7 +13,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarComponent implements OnInit {
-  @Output() homeBtnClick = new EventEmitter();
+  @Output()
+  homeBtnClick = new EventEmitter();
   constructor() {}
 
   ngOnInit() {}

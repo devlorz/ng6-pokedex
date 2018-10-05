@@ -1,15 +1,10 @@
-import { CapitalizePipe } from './../../../shared/capitalize.pipe';
-import { HttpClientModule } from '@angular/common/http';
+import { ChangeDetectionStrategy, DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokemonListComponent } from './pokemon-list.component';
-import { MatCardModule, MatButtonModule } from '@angular/material';
+import { AppMaterialModule } from '../../../app-material.module';
 import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
-import {
-  DebugElement,
-  ChangeDetectionStrategy,
-  Component
-} from '@angular/core';
+import { CapitalizePipe } from './../../../shared/capitalize.pipe';
+import { PokemonListComponent } from './pokemon-list.component';
 
 describe('PokemonListComponent', () => {
   let component: PokemonListComponent;
@@ -25,7 +20,7 @@ describe('PokemonListComponent', () => {
           PokemonCardComponent,
           CapitalizePipe
         ],
-        imports: [MatCardModule, MatButtonModule, HttpClientModule]
+        imports: [AppMaterialModule]
       })
       .compileComponents();
   }));
@@ -51,7 +46,16 @@ describe('PokemonListComponent', () => {
 
   it('should render pokemon component when there is pokemon data', () => {
     component.pokemonList = [
-      { name: 'name', sprite: 'image', types: [], id: 0, description: 'desc' }
+      {
+        name: 'name',
+        sprite: 'image',
+        types: [],
+        id: 0,
+        description: 'desc',
+        backgroundColor: { backgroundColor: '#F08030' },
+        titleColor: 'rgb(171, 79, 13)',
+        typesColor: { fire: '#F08030' }
+      }
     ];
     fixture.detectChanges();
     const pokemonlistDE: DebugElement = fixture.debugElement;

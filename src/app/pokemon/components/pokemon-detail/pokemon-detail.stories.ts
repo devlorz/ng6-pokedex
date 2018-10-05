@@ -1,13 +1,10 @@
-import { PokemonDetailComponent } from './pokemon-detail.component';
+import { MAT_DIALOG_DATA } from '@angular/material';
 import { storiesOf } from '@storybook/angular';
+
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
-import {
-  MatDialogModule,
-  MAT_DIALOG_DATA,
-  MatIconModule
-} from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetail } from '../../models/pokemon-detail.model';
+import { AppMaterialModule } from './../../../app-material.module';
+import { PokemonDetailComponent } from './pokemon-detail.component';
 
 const pokemonDetail: PokemonDetail = {
   name: 'pikachu',
@@ -16,14 +13,17 @@ const pokemonDetail: PokemonDetail = {
   types: ['electric'],
   id: 25,
   description:
-    ' It occasionally uses an electric shock to recharge a fellow Pikachu that is in a weakened state. '
+    ' It occasionally uses an electric shock to recharge a fellow Pikachu that is in a weakened state. ',
+  backgroundColor: { backgroundColor: '#F08030' },
+  titleColor: 'rgb(171, 79, 13)',
+  typesColor: { electric: '#F08030' }
 };
 
 storiesOf('Pokemon Detail', module).add('initial', () => ({
   component: PokemonDetailComponent,
   moduleMetadata: {
     declarations: [CapitalizePipe],
-    imports: [MatDialogModule, HttpClientModule, MatIconModule],
+    imports: [AppMaterialModule],
     providers: [
       {
         provide: MAT_DIALOG_DATA,
@@ -31,5 +31,5 @@ storiesOf('Pokemon Detail', module).add('initial', () => ({
       }
     ]
   },
-  props: {}
+  props: { pokemon: pokemonDetail }
 }));

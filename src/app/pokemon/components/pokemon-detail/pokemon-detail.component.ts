@@ -1,7 +1,6 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { Component, Input, OnInit } from '@angular/core';
+
 import { PokemonDetail } from '../../models/pokemon-detail.model';
-import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-detail',

@@ -1,25 +1,17 @@
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PokemonListWrapperComponent } from './pokemon-list-wrapper.component';
-import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
-import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
-import {
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDialog,
-  MatDialogModule
-} from '@angular/material';
-import { PokemonService } from '../../services/pokemon.service';
-import { PokemonDetail } from '../../models/pokemon-detail.model';
-import { of } from 'rxjs';
-import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { of } from 'rxjs';
+
 import { CapitalizePipe } from '../../../shared/capitalize.pipe';
-import { Overlay } from '@angular/cdk/overlay';
+import { PokemonCardComponent } from '../../components/pokemon-card/pokemon-card.component';
+import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
+import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
+import { PokemonDetail } from '../../models/pokemon-detail.model';
 import { PokemonDataService } from '../../services/pokemon-data.service';
+import { AppMaterialModule } from './../../../app-material.module';
+import { PokemonListWrapperComponent } from './pokemon-list-wrapper.component';
 
 describe('PokemonListWrapperComponent', () => {
   let component: PokemonListWrapperComponent;
@@ -33,13 +25,10 @@ describe('PokemonListWrapperComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MatCardModule,
-        MatFormFieldModule,
+        AppMaterialModule,
         HttpClientModule,
-        MatInputModule,
         BrowserAnimationsModule,
-        FormsModule,
-        MatDialogModule
+        FormsModule
       ],
       declarations: [
         PokemonListWrapperComponent,
