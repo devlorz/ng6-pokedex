@@ -36,4 +36,14 @@ describe('PokemonDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return color', () => {
+    expect(component.getColor('fire')).toEqual({ backgroundColor: '#F08030' });
+  });
+
+  it('should return title color', () => {
+    expect(component.getTitleColor()).toEqual({
+      backgroundColor: 'rgb(171, 79, 13)'
+    });
+  });
 });
