@@ -9,8 +9,8 @@ Inspired by https://www.pokedex.org/
 Demo https://ng-pokedex-f8bf4.firebaseapp.com/
 
 ## Built By
-- [Angular 6](https://github.com/angular/angular) 
-- [Angular CLI 6](https://github.com/angular/angular-cli)
-- [Angular Material 6](https://github.com/angular/angular-cli)
+- [Angular](https://github.com/angular/angular) 
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Angular Material](https://github.com/angular/angular-cli)
 - [Jest](https://github.com/facebook/jest)
 - [Storybook](https://github.com/storybooks/storybook)
