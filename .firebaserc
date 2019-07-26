@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ng-pokedex-f8bf4"
+  },
+  "targets": {
+    "ng5-pwa-a853e": {
+      "hosting": {
+        "ng6-pokedex": [
+          "ng5-pwa-a853e"
+        ]
+      }
+    }
   }
 }
