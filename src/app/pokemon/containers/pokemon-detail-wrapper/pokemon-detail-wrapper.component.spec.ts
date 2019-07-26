@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MAT_DIALOG_DATA } from '@angular/material';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { SharedModule } from '../../../shared/shared.module';
 import { PokemonDetailComponent } from '../../components/pokemon-detail/pokemon-detail.component';
