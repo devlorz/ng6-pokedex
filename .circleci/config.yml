@@ -23,5 +23,5 @@ jobs:
           name: angular-test
           command: yarn test
       - run:
-          name: angular-deploy
-          command: yarn ng deploy
+          name: deploy
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting
