@@ -6,7 +6,7 @@
 [![Lighthouse score: 100/100](https://lighthouse-badge.appspot.com/?score=100&category=PWA)](https://github.com/ebidel/lighthouse-badge)
 
 Inspired by https://www.pokedex.org/  
-Demo https://ng-pokedex-f8bf4.firebaseapp.com/
+Demo https://ng5-pwa-a853e.firebaseapp.com/
 
 ## Built By
 - [Angular](https://github.com/angular/angular) 
