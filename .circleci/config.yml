@@ -22,3 +22,6 @@ jobs:
       - run:
           name: angular-test
           command: yarn test
+      - run:
+          name: angular-deploy
+          command: yarn ng deploy
