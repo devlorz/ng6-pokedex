@@ -1,14 +1,5 @@
 {
   "projects": {
     "default": "ng5-pwa-a853e"
-  },
-  "targets": {
-    "ng5-pwa-a853e": {
-      "hosting": {
-        "ng6-pokedex": [
-          "ng5-pwa-a853e"
-        ]
-      }
-    }
   }
 }
