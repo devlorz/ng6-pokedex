@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ng6-pokedex",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
